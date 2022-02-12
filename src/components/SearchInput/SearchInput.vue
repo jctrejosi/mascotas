@@ -10,7 +10,7 @@
       />
       <datalist id="cats-list">
         <option
-          v-for="(cat, index) in catList"
+          v-for="(cat, index) in catsList"
           :key="index"
           :value="cat.name"
         />
@@ -20,31 +20,24 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: "SearchInput",
 
   data() {
     return {
-      search: "",
-      catList: [
-        {
-          name: "name 1"
-        },
-        {
-          name: "name 2"
-        },
-        {
-          name: "name 3"
-        }
-      ]
+      search: ""
     }
+  },
+
+  computed: {
+    ...mapState(['catsList'])
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .search {
-  background-color: $nearly-light-color;
   display: flex;
   justify-content: center;
   max-height: 100%;

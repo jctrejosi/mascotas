@@ -6,6 +6,7 @@
 <script>
 import Header from '@/components/Header/Header.vue'
 import SearchInput from '@/components/SearchInput/SearchInput.vue'
+import { mapActions } from 'vuex'
 
 export default {
   name: 'App',
@@ -13,6 +14,15 @@ export default {
   components: {
     Header,
     SearchInput
+  },
+
+  methods: {
+    ...mapActions(['Get_List_Cats', 'Generate_Image_Random'])
+  },
+
+  created () {
+    this.Get_List_Cats()
+    this.Generate_Image_Random()
   }
 }
 </script>
