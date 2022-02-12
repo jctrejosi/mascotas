@@ -7,7 +7,9 @@ const key = process.env.VUE_APP_API_KEY
 export default createStore({
   state: {
     catsList: [],
-    cat: {}
+    cat: {},
+    url: '',
+    flag: -1
   },
 
   mutations: {
@@ -15,8 +17,24 @@ export default createStore({
       state.catsList = newcatsLists
     },
 
-    random_cat(state, newCat) {
-      state.cat = newCat
+    next(state) {
+      if(state.flag === state.catsList.length - 1) {
+        state.flag = 0
+      } else {
+        state.flag = state.flag + 1
+      }
+      state.url = state.catsList[state.flag].image.url
+      state.cat = state.catsList[state.flag]
+    },
+
+    previous(state) {
+      if(state.flag === 0) {
+        state.flag = state.catsList.length - 1
+      } else {
+        state.flag = state.flag - 1
+      }
+      state.url = state.catsList[state.flag].image.url
+      state.cat = state.catsList[state.flag]
     }
   },
 
@@ -28,23 +46,19 @@ export default createStore({
             "x-api-key": key
           }
         })
-        commit('get_list_cats', response.data)
+        await commit('get_list_cats', response.data)
+        commit('next')
       } catch (e) {
         console.log(e)
       }
     },
 
-    async Random_Cat({ commit }) {
-      try {
-        const response = await axios.get(query.randomImage, {
-          headers: {
-            "x-api-key": key
-          }
-        })
-        commit('random_cat', response.data[0])
-      } catch (e) {
-        console.log(e)
-      }
+    Next({ commit }) {
+      commit('next')
+    },
+
+    Previous({ commit }) {
+      commit('previous')
     }
   }
 })
