@@ -35,3 +35,13 @@ $screen-sm:                            569px !default;   // Small screen / phone
 $screen-md:                            769px !default;   // Medium screen / table
 $screen-lg:                            1025px !default;  // large screen / desktop
 $screen-xl:                            1201px !default;  // Extra large screen /wide desktop
+
+//---------------------------- Font-Sizes --------------------------------------
+//------------------------------------------------------------------------------
+
+$main-title-size:                      2rem !default; // Tamaño del título principal
+$title-size:                           1.5rem !default; // Tamaño de los títulos
+$subtitle-size:                        1.3rem !default; // Tamaños de los subtítulos
+$p-size:                               1.2rem !default; // Tamaño de los párramos
+
+$p-line-height:                        1.5 !default; // Tamaño de interlineado de los párrafos
