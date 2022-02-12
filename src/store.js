@@ -34,14 +34,14 @@ export default createStore({
       }
     },
 
-    async Generate_Image_Random({ commit }) {
+    async Random_Cat({ commit }) {
       try {
         const response = await axios.get(query.randomImage, {
           headers: {
             "x-api-key": key
           }
         })
-        commit('generate_image_random', response.data[0])
+        commit('random_cat', response.data[0])
       } catch (e) {
         console.log(e)
       }

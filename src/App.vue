@@ -17,12 +17,12 @@ export default {
   },
 
   methods: {
-    ...mapActions(['Get_List_Cats', 'Generate_Image_Random'])
+    ...mapActions(['Get_List_Cats', 'Random_Cat'])
   },
 
   created () {
     this.Get_List_Cats()
-    this.Generate_Image_Random()
+    this.Random_Cat()
   }
 }
 </script>
