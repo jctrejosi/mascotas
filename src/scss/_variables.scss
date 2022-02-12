@@ -39,9 +39,10 @@ $screen-xl:                            1201px !default;  // Extra large screen /
 //---------------------------- Font-Sizes --------------------------------------
 //------------------------------------------------------------------------------
 
-$main-title-size:                      2rem !default; // Tamaño del título principal
-$title-size:                           1.5rem !default; // Tamaño de los títulos
-$subtitle-size:                        1.3rem !default; // Tamaños de los subtítulos
-$p-size:                               1.2rem !default; // Tamaño de los párramos
+$main-font-size:                      2rem !default; // Tamaño del título principal
+$title-font-size:                           1.5rem !default; // Tamaño de los títulos
+$subtitle-font-size:                        1.3rem !default; // Tamaños de los subtítulos
+$p-font-size:                               1.2rem !default; // Tamaño de los párramos
+$input-font-size:                           1rem !default;
 
 $p-line-height:                        1.5 !default; // Tamaño de interlineado de los párrafos
