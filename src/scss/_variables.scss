@@ -1,0 +1,37 @@
+//----------------------------- Escala Tonal -----------------------------------
+//------------------------------------------------------------------------------
+$light-color:                          #ffffff;                      //fff
+$light-backup:                         darken($light-color, 2.6%);   //#f8f8f8
+$practically-light-color:              darken($light-color, 10%);    //#e6e6e6
+$almost-light-color:                   darken($light-color, 20%);    //#ccc
+$nearly-light-color:                   darken($light-color, 30%);    //#b3b3b3
+$mid-light-color:                      darken($light-color, 40%);    //#999
+$mid-color:                            darken($light-color, 50%);    //#808080
+$mid-dark-color:                       darken($light-color, 60%);    //#666
+$nearly-dark-color:                    darken($light-color, 70%);    //#4d4d4d
+$almost-dark-color:                    darken($light-color, 80%);    //#333
+$practically-dark-color:               darken($light-color, 90%);    //#1a1a1a
+$dark-color:                           darken($light-color, 100%);   //#000
+
+//----------------------------- Colores de la página -----------------------------------
+//------------------------------------------------------------------------------
+
+$main-color:                           #39FCCD !default;       // Color que más se repite en la web
+$custom-color:                         #01130e !default;      // Segundo color que más se repite en la web
+
+$success-color:                        #11C676;
+$danger-color:                         #FC394C;
+
+//---------------------------- Fuentes Base ------------------------------------
+//------------------------------------------------------------------------------
+$main-font:                            'Helvetica' !default;  // Tipografía que más se repite en la web, ejemplo parrafos, span y enlaces
+
+$custom-font:                          'Courier New' !default;   // Segunda tipografía que más se repite en la web, ejemplo Hs
+
+//---------------------------- Resoluciones ------------------------------------
+//------------------------------------------------------------------------------
+$screen-xs:                            341px !default;   // Small screen / phone
+$screen-sm:                            569px !default;   // Small screen / phone
+$screen-md:                            769px !default;   // Medium screen / table
+$screen-lg:                            1025px !default;  // large screen / desktop
+$screen-xl:                            1201px !default;  // Extra large screen /wide desktop
