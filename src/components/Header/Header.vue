@@ -32,7 +32,7 @@ export default {
   height: 2rem;
   justify-content: center;
   left: 0;
-  max-width: 100%;
+  width: 100%;
   padding: 1rem 2rem;
   position: relative;
   top: 0;
@@ -45,7 +45,7 @@ export default {
   }
 
   &__icon {
-    padding: 1rem;
+    margin-left: 1rem;
     fill: $custom-color;
   }
 }

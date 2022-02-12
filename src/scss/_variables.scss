@@ -16,11 +16,13 @@ $dark-color:                           darken($light-color, 100%);   //#000
 //----------------------------- Colores de la página -----------------------------------
 //------------------------------------------------------------------------------
 
-$main-color:                           #39FCCD !default;       // Color que más se repite en la web
-$custom-color:                         #01130e !default;      // Segundo color que más se repite en la web
+$main-color:                           #30c084 !default;       // Color que más se repite en la web
+$custom-color:                         #111301 !default;      // Segundo color que más se repite en la web
 
-$success-color:                        #11C676;
-$danger-color:                         #FC394C;
+$success-color:                        #11C676 !default;
+$danger-color:                         #FC394C !default;
+
+$link-color:                           #2a1f91 !default;
 
 //---------------------------- Fuentes Base ------------------------------------
 //------------------------------------------------------------------------------
@@ -39,10 +41,11 @@ $screen-xl:                            1201px !default;  // Extra large screen /
 //---------------------------- Font-Sizes --------------------------------------
 //------------------------------------------------------------------------------
 
-$main-font-size:                      2rem !default; // Tamaño del título principal
-$title-font-size:                           1.5rem !default; // Tamaño de los títulos
-$subtitle-font-size:                        1.3rem !default; // Tamaños de los subtítulos
-$p-font-size:                               1.2rem !default; // Tamaño de los párramos
-$input-font-size:                           1rem !default;
+$main-font-size:                        2rem !default; // Tamaño del título principal
+$title-font-size:                       1.5rem !default; // Tamaño de los títulos
+$subtitle-font-size:                    1.3rem !default; // Tamaños de los subtítulos
+$p-font-size:                           1rem !default; // Tamaño de los párramos
+$input-font-size:                       1rem !default;
+$link-font-size:                        .8rem !default;
 
-$p-line-height:                        1.5 !default; // Tamaño de interlineado de los párrafos
+$p-line-height:                         1.5 !default; // Tamaño de interlineado de los párrafos
