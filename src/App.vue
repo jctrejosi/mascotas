@@ -1,15 +1,18 @@
 <template>
   <Header />
+  <SearchInput />
 </template>
 
 <script>
 import Header from '@/components/Header/Header.vue'
+import SearchInput from '@/components/SearchInput/SearchInput.vue'
 
 export default {
   name: 'App',
 
   components: {
-    Header
+    Header,
+    SearchInput
   }
 }
 </script>

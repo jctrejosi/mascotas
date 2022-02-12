@@ -1,20 +1,24 @@
 <template>
   <div class="header">
-    <div class="header__title">Mascotitas</div>
-    <div class="header__icon">
-      <leaf />
-    </div>
+    <div class="header__title">{{ title }}</div>
+      <img class="header__icon" :src="icon">
   </div>
 </template>
 
 <script>
-import leaf from '@/assets/icons/leaf.vue'
-
 export default {
   name: 'Header',
 
-  components: {
-    leaf
+  props: {
+    title: {
+      default: "Gatitos",
+      type: String
+    },
+
+    icon: {
+      default: require("../../assets/icons/leaf.svg"),
+      type: String
+    }
   }
 }
 </script>
@@ -35,7 +39,7 @@ export default {
 
   &__title {
     color: $custom-color;
-    font-size: $main-title-size;
+    font-size: $main-font-size;
     font-weight: bold;
     text-transform: uppercase;
   }
