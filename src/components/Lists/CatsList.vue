@@ -20,7 +20,11 @@
           :src="item.image"
           class="list-cats__item-image"
         />
-        <img class="list-cats__item-icon" src="./bin2.svg">
+        <img
+          @click="Remove_Cat(index)"
+          class="list-cats__item-icon"
+          src="./bin2.svg"
+        />
       </li>
     </ul>
     <div class="list-cats__buy" v-if="catsBuy">
@@ -57,7 +61,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['Show_List_Cats', 'Show_Modal'])
+    ...mapActions(['Show_List_Cats', 'Show_Modal', 'Remove_Cat'])
   }
 }
 </script>

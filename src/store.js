@@ -66,6 +66,10 @@ export default createStore({
         image: image
       }
       state.catsBuy.push(newCat)
+    },
+
+    remove_cat(state, i) {
+      state.catsBuy.splice(i, 1)
     }
   },
 
@@ -110,6 +114,10 @@ export default createStore({
 
     Add_Cat({ commit }) {
       commit('add_cat')
+    },
+
+    Remove_Cat({ commit }, index) {
+      commit('remove_cat', index)
     }
   }
 })
