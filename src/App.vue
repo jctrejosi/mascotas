@@ -6,6 +6,7 @@
     <CatsList v-if="viewListCats"/>
     <CategoriesList v-if="viewListCategories"/>
     <Modal v-if="viewModal" />
+    <ModalSuccess v-if="viewSuccess" />
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import Description from '@/components/Description/Description.vue'
 import CatsList from '@/components/Lists/CatsList.vue'
 import CategoriesList from '@/components/Lists/CategoriesList.vue'
 import Modal from '@/components/Modal.vue'
+import ModalSuccess from '@/components/ModalSuccess.vue'
 import { mapActions, mapState } from 'vuex'
 
 export default {
@@ -27,11 +29,12 @@ export default {
     Description,
     CatsList,
     CategoriesList,
-    Modal
+    Modal,
+    ModalSuccess
   },
 
   computed: {
-    ...mapState(['viewListCats', 'viewListCategories', 'viewModal'])
+    ...mapState(['viewListCats', 'viewListCategories', 'viewModal', 'viewSuccess'])
   },
 
   methods: {

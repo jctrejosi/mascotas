@@ -13,11 +13,8 @@ export default createStore({
     viewListCats: false,
     viewListCategories: false,
     viewModal: false,
-    catsBuy: [
-      {image: 'https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg', name: 'gatito1'},
-      {image: 'https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg', name: 'gatito1'},
-      {image: 'https://cdn2.thecatapi.com/images/0XYvRd7oD.jpg', name: 'gatito1'}
-    ]
+    catsBuy: [],
+    viewSuccess: false
   },
 
   mutations: {
@@ -55,6 +52,20 @@ export default createStore({
 
     show_modal(state) {
       state.viewModal = !state.viewModal
+    },
+
+    show_success(state) {
+      state.viewSuccess = !state.viewSuccess
+    },
+
+    add_cat(state) {
+      let name = state.cat.name
+      let image = state.cat.image.url
+      let newCat = {
+        name: name,
+        image: image
+      }
+      state.catsBuy.push(newCat)
     }
   },
 
@@ -91,6 +102,14 @@ export default createStore({
 
     Show_Modal({ commit }) {
       commit('show_modal')
+    },
+
+    Show_Success({ commit }) {
+      commit('show_success')
+    },
+
+    Add_Cat({ commit }) {
+      commit('add_cat')
     }
   }
 })

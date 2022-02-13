@@ -1,5 +1,13 @@
 <template>
   <div class="description">
+    <div class="description__button">
+      <button
+        @click="Add_Cat(), Show_Success()"
+        class="description__button--add"
+      >
+        {{ button }}
+      </button>
+    </div>
     <span class="description__name">{{ cat.name }}</span>
     <img class="description__image" :src="url" />
     <div class="description__arrow">
@@ -45,15 +53,23 @@
 
 <script>
 import { mapActions, mapState } from 'vuex'
+
 export default {
   name: 'Description',
+
+  props: {
+    button: {
+      default: 'Add',
+      type: String
+    }
+  },
 
   computed: {
     ...mapState(['cat', 'url'])
   },
 
   methods: {
-    ...mapActions(['Previous', 'Next'])
+    ...mapActions(['Previous', 'Next', 'Add_Cat', 'Show_Success'])
   }
 }
 </script>
@@ -68,15 +84,41 @@ export default {
   justify-content: center;
   position: relative;
 
+  &__button {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    &--add {
+      background-color: $success-color;
+      border: .1rem solid $dark-color;
+      border-radius: 2rem;
+      color: $custom-color;
+      cursor: pointer;
+      font-family: $custom-font;
+      font-size: $success-font-size;
+      font-weight: bold;
+      padding: .5rem 2rem;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+
+      &:hover {
+        background-color: darken($success-color, 5%);
+      }
+    }
+  }
+
   &__name {
     color: $custom-color;
     font-family: $main-font;
     font-size: $title-font-size;
-    text-transform: uppercase;
     font-weight: bold;
-    width: 100%;
     height: 10%;
+    margin-bottom: 1rem;
     text-align: center;
+    text-transform: uppercase;
+    width: 100%;
   }
 
   &__image {
