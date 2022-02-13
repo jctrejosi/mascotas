@@ -82,7 +82,7 @@ export default {
     background-image: url("search.svg");
     background-position: .4rem center;
     background-repeat: no-repeat;
-    background-size: 20px;
+    background-size: 1rem;
     border-radius: 2rem;
     border: 0.1rem solid $dark-color;
     color: $practically-dark-color;
