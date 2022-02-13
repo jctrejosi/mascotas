@@ -26,7 +26,7 @@
       </a>
       <a
         class="search__navigator--category"
-        @click="Show_List_Categories()"
+        @click="change_page()"
       >
         {{ categoryName }}
       </a>
@@ -54,6 +54,11 @@ export default {
     categoryName: {
       default: 'Categories',
       type: String
+    },
+
+    route: {
+      default: '/Category',
+      type: String
     }
   },
 
@@ -62,7 +67,11 @@ export default {
   },
 
   methods: {
-    ...mapActions(['Show_List_Cats', 'Show_List_Categories', 'Search_Cat'])
+    ...mapActions(['Show_List_Cats', 'Search_Cat']),
+
+    change_page() {
+      return this.$router.push(this.route)
+    }
   }
 }
 </script>
