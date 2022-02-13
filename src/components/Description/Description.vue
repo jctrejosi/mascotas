@@ -24,8 +24,6 @@
         <br>
         - Origin: {{ cat.origin }}
         <br>
-        - Weight: {{ cat.weight.metric }} kg
-        <br>
         - Dog Friendly: {{ cat.dog_friendly }}
         <br>
         - Adaptability: {{ cat.adaptability }}
@@ -37,6 +35,7 @@
       <a
         class="description__other--more"
         :href="cat.wikipedia_url"
+        target="_blank"
       >
         More information
       </a>

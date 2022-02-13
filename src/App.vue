@@ -3,6 +3,9 @@
     <Header />
     <SearchInput />
     <Description />
+    <CatsList v-if="viewListCats"/>
+    <CategoriesList v-if="viewListCategories"/>
+    <Modal v-if="viewModal" />
   </div>
 </template>
 
@@ -10,7 +13,10 @@
 import Header from '@/components/Header/Header.vue'
 import SearchInput from '@/components/SearchInput/SearchInput.vue'
 import Description from '@/components/Description/Description.vue'
-import { mapActions } from 'vuex'
+import CatsList from '@/components/Lists/CatsList.vue'
+import CategoriesList from '@/components/Lists/CategoriesList.vue'
+import Modal from '@/components/Modal.vue'
+import { mapActions, mapState } from 'vuex'
 
 export default {
   name: 'App',
@@ -18,7 +24,14 @@ export default {
   components: {
     Header,
     SearchInput,
-    Description
+    Description,
+    CatsList,
+    CategoriesList,
+    Modal
+  },
+
+  computed: {
+    ...mapState(['viewListCats', 'viewListCategories', 'viewModal'])
   },
 
   methods: {
