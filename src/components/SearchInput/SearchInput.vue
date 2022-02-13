@@ -7,6 +7,7 @@
         type="text"
         v-model="search"
         list="cats-list"
+        @change="Search_Cat(search)"
       />
       <datalist id="cats-list">
         <option
@@ -61,7 +62,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['Show_List_Cats', 'Show_List_Categories'])
+    ...mapActions(['Show_List_Cats', 'Show_List_Categories', 'Search_Cat'])
   }
 }
 </script>

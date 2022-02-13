@@ -70,6 +70,11 @@ export default createStore({
 
     remove_cat(state, i) {
       state.catsBuy.splice(i, 1)
+    },
+
+    search_cat(state, newCat) {
+      state.url = newCat[0].image.url
+      state.cat = newCat[0]
     }
   },
 
@@ -118,6 +123,11 @@ export default createStore({
 
     Remove_Cat({ commit }, index) {
       commit('remove_cat', index)
+    },
+
+    Search_Cat({ commit, state }, name) {
+      let cat = state.catsList.filter( element => element.name === name)
+      commit('search_cat', cat)
     }
   }
 })
