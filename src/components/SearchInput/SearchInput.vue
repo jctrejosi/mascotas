@@ -16,11 +16,25 @@
         />
       </datalist>
     </label>
+    <div class="search__navigator">
+      <a
+        class="search__navigator--list"
+        @click="Show_List_Cats()"
+      >
+        {{ listName }}
+      </a>
+      <a
+        class="search__navigator--category"
+        @click="Show_List_Categories()"
+      >
+        {{ categoryName }}
+      </a>
+    </div>
   </div>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 export default {
   name: "SearchInput",
 
@@ -30,8 +44,24 @@ export default {
     }
   },
 
+  props: {
+    listName: {
+      default: 'My Cats',
+      type: String
+    },
+
+    categoryName: {
+      default: 'Categories',
+      type: String
+    }
+  },
+
   computed: {
     ...mapState(['catsList'])
+  },
+
+  methods: {
+    ...mapActions(['Show_List_Cats', 'Show_List_Categories'])
   }
 }
 </script>
@@ -40,7 +70,6 @@ export default {
 .search {
   display: flex;
   justify-content: center;
-  max-height: 100%;
   position: relative;
   width: 100%;
 
@@ -60,6 +89,44 @@ export default {
     font-size: $input-font-size;
     padding: .5rem 2rem;
     width: 30rem;
+  }
+
+  &__navigator {
+    align-items: center;
+    bottom: 0;
+    display: flex;
+    height: 1rem;
+    margin: auto;
+    position: absolute;
+    right: 1rem;
+    top: 0;
+
+    &--list {
+      &::after {
+        align-items: center;
+        background-color: $nearly-dark-color;
+        content: '';
+        height: 100%;
+        right: 55%;
+        position: absolute;
+        top: 0;
+        width: .1rem;
+      }
+    }
+
+    &--category,
+    &--list {
+      cursor: pointer;
+      color: $custom-color;
+      font-family: $main-font;
+      font-size: $link-font-size;
+      font-weight: bold;
+      margin: 0 .5rem;
+
+      &:hover {
+        color: $main-color;
+      }
+    }
   }
 }
 </style>

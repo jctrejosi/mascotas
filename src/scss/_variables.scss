@@ -24,11 +24,16 @@ $danger-color:                         #FC394C !default;
 
 $link-color:                           #2a1f91 !default;
 
+//----------------------------- Colores de background -----------------------------------
+//------------------------------------------------------------------------------
+
+$background-dark-transparent:           rgba(83, 83, 83, .5) !default;
+
 //---------------------------- Fuentes Base ------------------------------------
 //------------------------------------------------------------------------------
 $main-font:                            'Helvetica' !default;  // Tipografía que más se repite en la web, ejemplo parrafos, span y enlaces
 
-$custom-font:                          'Courier New' !default;   // Segunda tipografía que más se repite en la web, ejemplo Hs
+$custom-font:                          'Arial' !default;   // Segunda tipografía que más se repite en la web, ejemplo Hs
 
 //---------------------------- Resoluciones ------------------------------------
 //------------------------------------------------------------------------------
@@ -46,6 +51,12 @@ $title-font-size:                       1.5rem !default; // Tamaño de los títu
 $subtitle-font-size:                    1.3rem !default; // Tamaños de los subtítulos
 $p-font-size:                           1rem !default; // Tamaño de los párramos
 $input-font-size:                       1rem !default;
-$link-font-size:                        .8rem !default;
+$link-font-size:                        .9rem !default;
+$button-close-font-size:                2rem !default;
+$button-buy-font-size:                  1.5rem !default;
+$name-font-size:                        1.2rem !default;
+
+//---------------------------- Line height --------------------------------------
+//------------------------------------------------------------------------------
 
 $p-line-height:                         1.5 !default; // Tamaño de interlineado de los párrafos
