@@ -126,8 +126,8 @@ export default createStore({
     },
 
     Search_Cat({ commit, state }, name) {
-      let cat = state.catsList.filter( element => element.name === name)
-      commit('search_cat', cat)
+      let cat = state.catsList.filter( element => element.name.toLowerCase() === name.toLowerCase())
+      if(cat.length !== 0) {commit('search_cat', cat)}
     }
   }
 })

@@ -89,7 +89,7 @@ export default {
     font-family: $custom-font;
     font-size: $input-font-size;
     padding: .5rem 2rem;
-    width: 30rem;
+    width: 20rem;
   }
 
   &__navigator {
