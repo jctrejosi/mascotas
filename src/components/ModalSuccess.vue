@@ -40,7 +40,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['Show_Success'])
+    ...mapActions('home', ['Show_Success'])
   }
 }
 </script>

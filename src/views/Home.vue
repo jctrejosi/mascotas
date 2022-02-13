@@ -26,11 +26,11 @@ export default {
   },
 
   computed: {
-    ...mapState(['viewListCats', 'viewListCategories', 'viewModal', 'viewSuccess'])
+    ...mapState('home', ['viewListCats', 'viewListCategories', 'viewModal', 'viewSuccess'])
   },
 
   methods: {
-    ...mapActions(['Get_List_Cats'])
+    ...mapActions('home', ['Get_List_Cats'])
   },
 
   created () {

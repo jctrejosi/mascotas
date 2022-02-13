@@ -63,11 +63,11 @@ export default {
   },
 
   computed: {
-    ...mapState(['catsList'])
+    ...mapState('home', ['catsList'])
   },
 
   methods: {
-    ...mapActions(['Show_List_Cats', 'Search_Cat']),
+    ...mapActions('home', ['Show_List_Cats', 'Search_Cat']),
 
     change_page() {
       return this.$router.push(this.route)

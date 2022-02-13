@@ -57,11 +57,11 @@ export default {
   },
 
   computed: {
-    ...mapState(['catsBuy'])
+    ...mapState('home', ['catsBuy'])
   },
 
   methods: {
-    ...mapActions(['Show_List_Cats', 'Show_Modal', 'Remove_Cat'])
+    ...mapActions('home', ['Show_List_Cats', 'Show_Modal', 'Remove_Cat'])
   }
 }
 </script>

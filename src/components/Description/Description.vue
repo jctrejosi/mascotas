@@ -65,11 +65,11 @@ export default {
   },
 
   computed: {
-    ...mapState(['cat', 'url'])
+    ...mapState('home', ['cat', 'url'])
   },
 
   methods: {
-    ...mapActions(['Previous', 'Next', 'Add_Cat', 'Show_Success'])
+    ...mapActions('home', ['Previous', 'Next', 'Add_Cat', 'Show_Success'])
   }
 }
 </script>
