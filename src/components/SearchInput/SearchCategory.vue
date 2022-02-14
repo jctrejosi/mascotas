@@ -1,43 +1,38 @@
 <template>
-  <div class="search">
-    <label class="search__label">
+  <div class="search-category">
+    <div class="search-category__navigator">
+      <img src="" alt="">
+      <a
+        class="search-category__navigator--link"
+        @click="change_page()"
+      >
+        {{ link }}
+      </a>
+    </div>
+    <label class="search-category__label">
       <input
-        class="search__input"
-        placeholder="Buscar mascotas"
+        class="search-category__input"
+        placeholder="Buscar categoría"
         type="text"
         v-model="search"
-        list="cats-list"
-        @change="Search_Cat(search)"
+        list="categories-list"
       />
-      <datalist id="cats-list">
+      <datalist id="categories-list">
         <option
-          v-for="(cat, index) in catsList"
+          v-for="(item, index) in categoriesList"
           :key="index"
-          :value="cat.name"
+          :value="item.name"
         />
       </datalist>
     </label>
-    <div class="search__navigator">
-      <a
-        class="search__navigator--list"
-        @click="Show_List_Cats()"
-      >
-        {{ listName }}
-      </a>
-      <a
-        class="search__navigator--category"
-        @click="change_page()"
-      >
-        {{ categoryName }}
-      </a>
-    </div>
   </div>
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
+
 export default {
-  name: "SearchInput",
+  name: "SearchCategory",
 
   data() {
     return {
@@ -46,29 +41,22 @@ export default {
   },
 
   props: {
-    listName: {
-      default: 'My Cats',
-      type: String
-    },
-
-    categoryName: {
-      default: 'Categories',
+    link: {
+      default: '< Home',
       type: String
     },
 
     route: {
-      default: '/Category',
+      default: '/',
       type: String
     }
   },
 
   computed: {
-    ...mapState('home', ['catsList'])
+    ...mapState('category', ['categoriesList'])
   },
 
   methods: {
-    ...mapActions('home', ['Show_List_Cats', 'Search_Cat']),
-
     change_page() {
       return this.$router.push(this.route)
     }
@@ -77,7 +65,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.search {
+.search-category {
   display: flex;
   justify-content: center;
   position: relative;
@@ -106,26 +94,12 @@ export default {
     bottom: 0;
     display: flex;
     height: 1rem;
+    left: 1rem;
     margin: auto;
     position: absolute;
-    right: 1rem;
     top: 0;
 
-    &--list {
-      &::after {
-        align-items: center;
-        background-color: $nearly-dark-color;
-        content: '';
-        height: 100%;
-        right: 55%;
-        position: absolute;
-        top: 0;
-        width: .1rem;
-      }
-    }
-
-    &--category,
-    &--list {
+    &--link {
       cursor: pointer;
       color: $custom-color;
       font-family: $main-font;
