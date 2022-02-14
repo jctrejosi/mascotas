@@ -44,8 +44,6 @@ export const category = {
         axios.defaults.headers.common['x-api-key'] = "DEMO-API-KEY"
         let query_params = {
           limit: 8,
-          order: 'Desc',
-          page: 1,
           category_name: item.id
         }
         const response = await axios.get(query.searchCategory, {
