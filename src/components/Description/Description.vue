@@ -95,7 +95,7 @@ export default {
     width: 100%;
 
     &--add {
-      background-color: $success-color;
+      background-color: $main-color;
       border: .1rem solid $dark-color;
       border-radius: 2rem;
       color: $custom-color;
@@ -108,7 +108,7 @@ export default {
       margin-bottom: 1rem;
 
       &:hover {
-        background-color: darken($success-color, 5%);
+        background-color: darken($main-color, 5%);
       }
     }
   }
