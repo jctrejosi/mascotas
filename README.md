@@ -72,18 +72,31 @@ En la página de categorías, cuenta con un buscador, que realiza una consulta G
 ### Funcionalidad 
 
 -Buscar gato -> actualiza la descripción.
+
 -Añadir gato a la lista.
+
 -Cambiar entre gatos, gracias a las flechas de navegación. (a los lados de la descripción).
+
 -Ver lista de los gatos añadidos.
+
 -Remover gato de la lista
+
 -Filtrar gatos por categoria
+
 
 ### Tecnologías usadas en el proyecto:
 
 -Vue.js 3. (CLI de vue, para construcción general del proyecto).
+
 -Sass-loader, node-sass. (Como pre-procesadores css para los estilos de las páginas).
+
 -Axios (Para consulta a la API).
+
 -Vuex (Para manejar los estados de la aplicación).
+
 -Vue-Router (Para redireccionar a páginas internas en el proyecto).
+
 -Dependencias complementarias: @vue/cli, eslint, core-js.
+
 -Docker compose (Para montar el aplicativo).
+
