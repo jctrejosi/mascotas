@@ -2,17 +2,24 @@
 
 ## Configuración del proyecto
 
-Ejecute el comando:
-(Versión de node js sugerida: 14.19.0)
+Debe tener instalado en su equipo Node.js
+
+(Versión de Node.js sugerida: 14.19.0)
+
+Vaya al directorio donde esté el package.jason del proyecto y ejecute:
 ```
 npm install
 ```
 
 ### Compilar y recargar en local
+Liego de instalar las dependencias ejecute:
 ```
 npm run serve
 ```
-Luego abra en su navegador localhost:8080 o el puerto que haya configurado
+Abra en su navegador localhost:8080 o el puerto que haya configurado
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### Descriprión del proyecto
 
@@ -79,7 +86,4 @@ En la página de categorías, cuenta con un buscador, que realiza una consulta G
 -Vuex (Para manejar los estados de la aplicación).
 -Vue-Router (Para redireccionar a páginas internas en el proyecto).
 -Dependencias complementarias: @vue/cli, eslint, core-js.
-
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+-Docker compose (Para montar el aplicativo).
