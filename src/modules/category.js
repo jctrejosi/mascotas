@@ -18,7 +18,7 @@ export const category = {
 
     search_category(state, response) {
       state.images = []
-      response.array.forEach(element => {
+      response.forEach(element => {
         state.images.push(element.url)
       });
     }
@@ -38,14 +38,15 @@ export const category = {
       }
     },
 
-    async Search_Category({ commit }) {
+    async Search_Category({ commit, state }, category) {
+      let item = state.categoriesList.filter( element => element.name.toLowerCase() === category.toLowerCase())
       try {
         axios.defaults.headers.common['x-api-key'] = "DEMO-API-KEY"
         let query_params = {
-          limit: 10,
+          limit: 8,
           order: 'Desc',
           page: 1,
-          category_ids: 1
+          category_name: item.id
         }
         const response = await axios.get(query.searchCategory, {
           params: query_params

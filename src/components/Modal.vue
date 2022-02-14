@@ -28,7 +28,7 @@ export default {
   },
 
   methods: {
-    ...mapActions(['Show_Modal'])
+    ...mapActions('home', ['Show_Modal'])
   }
 }
 </script>

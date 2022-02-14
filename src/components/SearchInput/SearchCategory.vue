@@ -16,6 +16,7 @@
         type="text"
         v-model="search"
         list="categories-list"
+        @change="Search_Category(search)"
       />
       <datalist id="categories-list">
         <option
@@ -29,7 +30,7 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   name: "SearchCategory",
@@ -57,6 +58,8 @@ export default {
   },
 
   methods: {
+    ...mapActions('category', ['Search_Category']),
+
     change_page() {
       return this.$router.push(this.route)
     }
