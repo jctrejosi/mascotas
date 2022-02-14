@@ -84,6 +84,10 @@ export default {
   justify-content: center;
   position: relative;
 
+  @media (max-width: $screen-md) {
+    width: 60%;
+  }
+
   &__button {
     align-items: center;
     display: flex;

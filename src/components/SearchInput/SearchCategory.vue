@@ -74,8 +74,18 @@ export default {
   position: relative;
   width: 100%;
 
+  @media (max-width: $screen-md) {
+    flex-wrap: wrap;
+  }
+
   &__label {
     padding: 1rem 2rem;
+
+    @media (max-width: $screen-md) {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
   }
 
   &__input {
@@ -101,6 +111,12 @@ export default {
     margin: auto;
     position: absolute;
     top: 0;
+
+    @media (max-width: $screen-md) {
+      position: relative;
+      order: 1;
+      width: 100%;
+    }
 
     &--link {
       cursor: pointer;

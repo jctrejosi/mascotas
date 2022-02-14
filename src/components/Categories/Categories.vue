@@ -25,12 +25,13 @@ export default {
 .content-images {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   margin: 0 auto;
-  width: 40rem;
+  justify-content: center;
+  width: 70%;
 
   &__image {
-    width: 9rem;
+    width: 10rem;
+    height: 10rem;
     padding: .5rem;
   }
 }

@@ -83,8 +83,18 @@ export default {
   position: relative;
   width: 100%;
 
+  @media (max-width: $screen-md) {
+    flex-wrap: wrap;
+  }
+
   &__label {
     padding: 1rem 2rem;
+
+    @media (max-width: $screen-md) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
   }
 
   &__input {
@@ -110,6 +120,10 @@ export default {
     position: absolute;
     right: 1rem;
     top: 0;
+
+    @media (max-width: $screen-md) {
+      position: relative;
+    }
 
     &--list {
       &::after {
